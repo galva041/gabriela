@@ -3,19 +3,33 @@ import {RiArrowRightDoubleFill} from 'react-icons/ri'
 import Featured from "@/components/featured"
 import Category from '@/components/category'
 import Project from '@/components/project'
+import Stars from '@/components/stars'
+import Typewriter from 'typewriter-effect'
+import Link from 'next/link'
+
 
 export default function Home() {
   return (
-    <main className="z-1">
-      <section className="flex flex-col justify-evenly items-center h-screen">
-        <div className='flex flex-col gap-5'>
-          <h1 className="text-center text-7xl text-black dark:text-white">Gabriela Alvarez</h1>
-          <h3 className="font-worksans text-center text-3xl dark:text-yellow text-glow-gray">
-            Software Engineer
+    <main className="z-9">
+      <section className="flex flex-col justify-around items-center h-screen bg-gradient-radial dark:from-glow-gray dark:to-gun-metal from-gradi-yellow to-powder-blue z-1">
+        <Stars className="z-2"/>
+        <div className='flex flex-col gap-20 sm:gap-5 justify-between'>
+          <h1 className="z-9 text-center text-7xl text-black dark:text-white">
+            Gabriela Alvarez
+          </h1>
+
+          <h3 className="font-worksans text-center text-2xl sm:text-3xl dark:text-yellow text-glow-gray">
+            <Typewriter
+              options={{
+                strings: ['Software Engineer', 'Educator', 'Southern California'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </h3>
         </div>
 
-        <div className='flex flex-col gap-3'>
+        <div className='hidden sm:flex flex-col gap-3 invisible sm:visible'>
           <h4 className="text-lg text-start font-karla font-medium ml-1 text-black dark:text-white">
             Featured Work
           </h4>
@@ -26,14 +40,20 @@ export default function Home() {
           </div>
 
           <div className='flex items-center ml-1 text-black dark:text-white'>
-            <FaChevronDown/> 
+            <Link href="/#work"><FaChevronDown className='animate-bounce'/></Link>
             <hr className="h-px w-full ml-3 mr-1 border-0 bg-black dark:bg-white"/>
           </div>
         </div>
+
+        <div className='flex justify-center items-center text-black dark:text-white sm:hidden mb-5 mt-36'>
+          <hr className="h-0.5 w-24 border-0 bg-black dark:bg-white"/>
+          <Link href="/#work"><FaChevronDown className='animate-bounce mx-5'/></Link>
+          <hr className="h-0.5 w-24 border-0 bg-black dark:bg-white"/>
+        </div>
       </section>
 
-      <section className='flex flex-col px-14 py-5 pb-8 justify-between items-center'>
-        <h2 className='text-3xl xl:text-4xl font-bold text-start self-baseline mb-2.5 text-black dark:text-white'>
+      <section id="work" className='flex flex-col px-14 py-10 justify-between items-center'>
+        <h2 className='text-3xl xl:text-4xl font-bold text-start self-baseline mt-14 mb-2.5 text-black dark:text-white'>
           Work
         </h2>
         
@@ -45,7 +65,7 @@ export default function Home() {
           <Category name="Data"/>
         </div>
         
-        <div className='my-5 mb-5 grid gap-10 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
+        <div className='my-5 mb-5 grid gap-10 grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2'>
           <Project name="My Portfolio" desc="Connecting college students and organizations more efficiently to further enhance the college experience."/>
           <Project name="StudyMates!" desc="Connecting college students and organizations more efficiently to further enhance the college experience."/>
           <Project name="tagAlong" desc="Connecting college students and organizations more efficiently to further enhance the college experience."/>

@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   darkMode: ['class'],
   content: [
@@ -30,9 +32,15 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        },
+      },
+      height: {
+        '128': '32rem',
+        '120': '30rem',
+        '112': '28rem',
+        '108': '27rem',
+        '100': '25rem',
+        '152': '38rem'
+      }
     },
   },
   plugins: [],

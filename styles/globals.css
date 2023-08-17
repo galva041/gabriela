@@ -20,7 +20,7 @@
   }
 
   p {
-    @apply dark:text-white text-black
+    @apply dark:text-white text-black text-base xl:text-lg text-justify
   }
   
   ul li a {
