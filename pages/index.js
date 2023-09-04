@@ -56,6 +56,10 @@ export default function Home() {
         <h2 className='text-3xl xl:text-4xl font-bold text-start self-baseline mt-14 mb-2.5 text-black dark:text-white'>
           Work
         </h2>
+
+        <h3 className='text-md sm:text-lg text-start self-baseline text-black dark:text-white'>
+          Click any for a description and links to visit the GitHub and/or Demo.
+        </h3>
         
         <div className='flex gap-2 my-5 self-baseline'>
           <Category name="All"/>
@@ -66,19 +70,20 @@ export default function Home() {
         </div>
         
         <div className='my-5 mb-5 grid gap-10 grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2'>
-          <Project name="My Portfolio" desc="Connecting college students and organizations more efficiently to further enhance the college experience."/>
-          <Project name="StudyMates!" desc="Connecting college students and organizations more efficiently to further enhance the college experience."/>
-          <Project name="tagAlong" desc="Connecting college students and organizations more efficiently to further enhance the college experience."/>
-          <Project name="R'Steam" desc="Connecting college students and organizations more efficiently to further enhance the college experience."/>
-          <Project name="Smart Water Bottle" desc="Connecting college students and organizations more efficiently to further enhance the college experience."/>
+          <Project name="My Portfolio"/>
+          <Project name="StudyMates!"/>
+          <Project name="tagAlong"/>
+          <Project name="R'Steam"/>
+          <Project name="Smart Water Bottle"/>
         </div>
 
-        <button className='flex justify-center items-center px-10 py-7 rounded-md bg-yellow drop-shadow-lg'>
+        <a className='flex justify-center items-center px-10 py-7 rounded-md bg-yellow hover:bg-gradi-yellow drop-shadow-lg'
+        target="_blank" href="https://github.com/galva041">
           <h2 className="text-lg font-bold text-black">
-             GitHub
+            GitHub
           </h2>
           <RiArrowRightDoubleFill size={25}/>
-        </button>
+        </a>
       </section>
     </main>
   )

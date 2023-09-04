@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'powder-blue': '#ACB5CA',
+        'powder-blue': '#7A89AA',
         'gradi-yellow': '#FFF8D6',
         'off-white': '#FFFDF5',
         'yellow': '#FFE0B0',
@@ -40,7 +40,9 @@ module.exports = {
         '108': '27rem',
         '100': '25rem',
         '152': '38rem'
-      }
+      },
+      keyframes: {},
+      animation: {},
     },
   },
   plugins: [],
