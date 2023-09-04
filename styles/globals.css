@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+input[type="radio"]:checked + label {
+  @apply bg-red-500;
+}
 
 @layer base {
   main {
@@ -24,7 +27,7 @@
   }
   
   ul li a {
-    @apply font-worksans hover:text-yellow font-medium hover:font-bold
+    @apply font-worksans hover:text-yellow font-medium 
   }
 
   li {
