@@ -13,12 +13,17 @@ export default function Home() {
     <main className="z-9">
       <section className="flex flex-col justify-around items-center h-screen bg-gradient-radial dark:from-glow-gray dark:to-gun-metal from-gradi-yellow to-powder-blue z-1">
         <Stars className="z-2"/>
-        <div className='flex flex-col gap-20 sm:gap-5 justify-between'>
-          <h1 className="z-9 text-center text-7xl text-black dark:text-white">
-            Gabriela Alvarez
-          </h1>
+        <div className='flex flex-col gap-20 sm:gap-5 justify-between items-center'>
+          <div className='flex flex-col items-center justify-center'>
+            <h3 className="font-karla text-left text-xl sm:text-2xl dark:text-white text-glow-gray">
+              Hello, friends! I'm
+            </h3> 
+            <h1 className="z-9 text-center text-7xl sm:text-7xl text-black dark:text-white font-corben">
+              Gabriela Alvarez
+            </h1>
+          </div>
 
-          <h3 className="font-worksans text-center text-2xl sm:text-3xl dark:text-yellow text-glow-gray">
+          <h3 className="font-karla text-center text-2xl sm:text-3xl dark:text-yellow text-glow-gray">
             <Typewriter
               options={{
                 strings: ['Software Engineer', 'Educator', 'Southern California'],
@@ -34,7 +39,7 @@ export default function Home() {
             Featured Work
           </h4>
 
-          <div className='flex gap-10'>
+          <div className='flex gap-10 xl:gap-x-16'>
             <Featured name="StudyMates!" type="React Native App"/>
             <Featured name="tagAlong" type="Vue.js Website"/>
           </div>
@@ -54,22 +59,22 @@ export default function Home() {
 
       <section id="work" className='flex flex-col px-14 py-10 justify-between items-center'>
         <h2 className='text-3xl xl:text-4xl font-bold text-start self-baseline mt-14 mb-2.5 text-black dark:text-white'>
-          Work
+          Projects
         </h2>
 
         <h3 className='text-md sm:text-lg text-start self-baseline text-black dark:text-white'>
-          Click any for a description and links to visit the GitHub and/or Demo.
+          Click any project for a description and links to visit the GitHub, demo, or documentation.
         </h3>
         
-        <div className='flex gap-2 my-5 self-baseline'>
+        {/* <div className='flex gap-2 my-5 self-baseline'>
           <Category name="All"/>
           <Category name="Web Dev"/>
           <Category name="App Dev"/>
           <Category name="Embedded Systems"/>
           <Category name="Data"/>
-        </div>
+        </div> */}
         
-        <div className='my-5 mb-5 grid gap-10 grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2'>
+        <div className='my-7 grid gap-10 gap-x-14 lg:gap-x-24 grid-cols-1 lg:grid-cols-3 md:grid-cols-2'>
           <Project name="My Portfolio"/>
           <Project name="StudyMates!"/>
           <Project name="tagAlong"/>

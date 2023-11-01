@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import Layout from '@/components/layout'
 import { useEffect } from 'react'
-import { Work_Sans, Karla } from 'next/font/google'
+import { Work_Sans, Karla, Corben } from 'next/font/google'
 
 const worksans = Work_Sans({
   subsets: ['latin'],
@@ -13,6 +13,12 @@ const karla = Karla({
   subsets: ['latin'],
   variable: '--font-karla',
   weight: ['500', '700', '800'],
+})
+
+const corben = Corben({
+  subsets: ['latin'],
+  variable: '--font-corben',
+  weight: ['400', '700'],
 })
 
 export default function App({ Component, pageProps }) {
@@ -27,7 +33,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     // <ThemeProvider enableSystem={true} attribute='class'>
-      <main className={[karla.className, worksans.className]}>
+      <main className={`${karla.variable} ${worksans.variable} ${corben.variable}`}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
