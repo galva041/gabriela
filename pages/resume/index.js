@@ -19,8 +19,10 @@ const Resume = () => {
             </Document> */}
 
             <div className="self-center h-80 sm:h-152 w-11/12 my-10 rounded border-8 border-gun-metal dark:border-ghost-white">
-                <iframe src="https://drive.google.com/file/d/1kNefujQXl0OVbYsXME1Fc-1vrUgxMMsM/preview" width="100%" height="100%" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/17ei-DDhUN-x6uzNOa1HmL_64wsan5H7d/preview" width="100%" height="100%" allow="autoplay"></iframe>
             </div>
+
+            {/* <iframe src="https://scratch.mit.edu/projects/916662409/embed" allowtransparency="true" width="385" height="202" frameborder="0" scrolling="no" allowfullscreen></iframe> */}
         </main>
     );
 };

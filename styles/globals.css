@@ -19,7 +19,7 @@ input[type="radio"]:checked + label {
   }
 
   header {
-    @apply dark:text-white text-black
+    @apply text-white
   }
 
   p {

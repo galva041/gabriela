@@ -27,8 +27,11 @@ module.exports = {
         'white': '#EFF0F3',
         },
       fontFamily: {
-        worksans: ['Work Sans', 'ui-sans-serif', 'system-ui'],
-        karla: ['Karla', 'ui-sans-serif', 'system-ui'],
+        "worksans": "var(--font-worksans)",
+        // ['Work Sans', 'ui-sans-serif', 'system-ui'],
+        "karla": "var(--font-karla)",
+        "corben": "var(--font-corben)",
+        //['Karla', 'ui-sans-serif', 'system-ui'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

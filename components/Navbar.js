@@ -39,12 +39,20 @@ const Navbar = () => {
             setWindow(false)
         )
     };
+    const setLightTheme = () => {
+        localStorage.theme = 'light';
+    };
+
+    const setDarkTheme = () => {
+        localStorage.theme = 'dark';
+    };
     useEffect(() => {
 
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     document.documentElement.classList.add('dark')
                 } else {
                     document.documentElement.classList.remove('dark')
+                    document.documentElement.classList.add('light')
                 }
         
                 setTheme(localStorage.theme);
@@ -71,17 +79,9 @@ const Navbar = () => {
         // };
     }, [router.events]);
 
-    const setLightTheme = () => {
-        localStorage.theme = 'light';
-    };
-
-    const setDarkTheme = () => {
-        localStorage.theme = 'dark';
-    };
-
     return (
         <header style={{backgroundColor: `${color}`, boxShadow:`${shadow}`}} className="flex justify-between items-start sm:items-center w-screen h-max pt-10 sm:pt-5 pb-5 px-4 z-10 fixed top-0 sm:top-0 ">
-            <h1 className="font-worksans text-lg font-bold hover:font-extrabold hover:text-yellow">
+            <h1 className="font-worksans text-lg font-bold hover:font-extrabold hover:text-yellow text-white">
                 <Link href="/">Gabriela Alvarez</Link>
             </h1>
 
@@ -89,13 +89,13 @@ const Navbar = () => {
                 <nav className="justify-self-center">
                     <ul className="flex justify-between">
                         <li><Link href="/about" >About</Link></li>
-                        <li><Link href="/#work" >Work</Link></li>
+                        <li><Link href="/#work">Projects</Link></li>
                         <li><Link href="/resume" >Resume</Link></li>
                         {/* <li><a href="#">Contact</a></li> */}
                     </ul>
                 </nav>
 
-                {currTheme === 'dark' ? (
+                {/* {currTheme === 'dark' ? (
                     <button onClick={setLightTheme} className="drop-shadow-sm hover:text-yellow">
                         <PiMoonStarsBold color="white" size={25}/>
                     </button>
@@ -103,7 +103,7 @@ const Navbar = () => {
                     <button onClick={setDarkTheme} className="drop-shadow-sm hover:text-yellow">
                         <PiSunBold color="black" size={25}/>
                     </button>
-                )}
+                )} */}
             </div>
 
             <div style={{backgroundColor: `${color}`}} className="sm:hidden flex flex-col justify-end items-end relative ">
@@ -117,13 +117,13 @@ const Navbar = () => {
                     <nav className="my-2">
                         <ul className="flex flex-col">
                             <li><Link href="/about" onClick={handleNav}>About</Link></li>
-                            <li><Link href="/#work" onClick={handleNav}>Work</Link></li>
+                            <li><Link href="/#work" onClick={handleNav}>Projects</Link></li>
                             <li><Link href="/resume" onClick={handleNav}>Resume</Link></li>
                             {/* <li><a href="#">Contact</a></li> */}
                         </ul>
                     </nav>
 
-                    {currTheme === 'dark' ? (
+                    {/* {currTheme === 'dark' ? (
                     <button onClick={setLightTheme} className="drop-shadow-sm hover:text-yellow">
                         <PiMoonStarsBold color="white" size={25}/>
                     </button>
@@ -131,7 +131,7 @@ const Navbar = () => {
                         <button onClick={setDarkTheme} className="drop-shadow-sm hover:text-yellow">
                             <PiSunBold color="black" size={25}/>
                         </button>
-                    )}
+                    )} */}
                 </div>
             </div>
         </header>
