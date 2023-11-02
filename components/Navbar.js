@@ -9,16 +9,16 @@ import { useTheme } from "next-themes";
 const Navbar = () => {
     const router = useRouter();
     var [currTheme, setTheme] = useState(null);
-    // useEffect(() => {
-    //     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    //         document.documentElement.classList.add('dark')
-    //     } else {
-    //         document.documentElement.classList.remove('dark')
-    //     }
+    useEffect(() => {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
 
-    //     setTheme(localStorage.theme);
-    //     console.log(currTheme);
-    // }, []);
+        setTheme(localStorage.theme);
+        console.log(currTheme);
+    }, []);
 
     const [mobileNav, setNav] = useState(false);
     const handleNav = () => {
@@ -56,7 +56,7 @@ const Navbar = () => {
                 }
         
                 setTheme(localStorage.theme);
-                console.log(currTheme);
+                //console.log(currTheme);
 
         const changeColor = (url) => {
             const isLandingPage = (url === '/');

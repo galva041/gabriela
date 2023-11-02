@@ -16,7 +16,7 @@ export default function Home() {
         <div className='flex flex-col gap-20 sm:gap-5 justify-between items-center'>
           <div className='flex flex-col items-center justify-center'>
             <h3 className="font-karla text-left text-xl sm:text-2xl dark:text-white text-glow-gray">
-              Hello, friends! I'm
+              Hello, friends! I&rsquo;m
             </h3> 
             <h1 className="z-9 text-center text-7xl sm:text-7xl text-black dark:text-white font-corben">
               Gabriela Alvarez
@@ -78,7 +78,7 @@ export default function Home() {
           <Project name="My Portfolio"/>
           <Project name="StudyMates!"/>
           <Project name="tagAlong"/>
-          <Project name="R'Steam"/>
+          <Project name="R&rsquo;Steam"/>
           <Project name="Design@UCR"/>
         </div>
 

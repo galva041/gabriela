@@ -13,9 +13,7 @@ const Featured = ({name, type}) => {
                 <Image
                     src={name === 'tagAlong'? smile : mates}
                     alt="Picture of the mates"
-                    layout="fill"
-                    objectFit="cover" 
-                    className="rounded-full"
+                    className="object-fill rounded-full"
                 />
             </div>
             <div>
