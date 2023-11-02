@@ -2,8 +2,15 @@ import gradpic from "../public/gradpic.jpg"
 import Image from "next/image";
 import Skill from "./skill";
 import { IoMdOpen } from "react-icons/io";
+import portfolio_dark from "../public/portfolio_dark.png"
+import portfolio_light from "../public/portfolio_light.png"
+import rsteam from "../public/rsteam.png"
+import tags from "../public/tags.png"
+import studymates from "../public/studymates.png"
+import design from "../public/design.png"
 
 const Project = ({name}) => {
+    var pic = 0;
     var projRole = 'error - role';
     var projTime = 'error - time';
     var projLinks = ['error - link'];
@@ -14,6 +21,7 @@ const Project = ({name}) => {
     
     switch(name) {
         case 'My Portfolio':
+            pic = 1;
             projRole = 'Front-End Engineer';
             projTime = '2023';
             projLinks = ['/'];
@@ -21,56 +29,59 @@ const Project = ({name}) => {
             projDesc = "My personal website to showcase my projects and skills.";
             projConts = ['Designed, developed, and deployed full-stack, cross-platform website.', 
             'Utilized breakpoints to ensure responsive design across screen-sizes.',
-            'Implemented light / dark mode based on system settings.', 
-            'Continous updates and re-designs.']
+            'Implemented light / dark mode based on system settings.']
             projTools = ['Next.js', 'JavaScript', 'Tailwind', 'CSS', 'HTML', 'Figma'];
             break;
         case 'StudyMates!':
+            pic = 2;
             projRole = 'Full-Stack Developer';
             projTime = 'Fall 2022 - Winter 2023';
             projLinks = ['https://drive.google.com/file/d/1MAS2dJy8uLlLVPGiHDmMTKwPlyQI4dTV/view', 'https://github.com/galva041/StudyMates-App.git'];
             projLinkDesc = ['Demo', 'Github',];
             projDesc = "Pomodoro timer app with virtual pet game incentives.";
-            projConts = ['Lead UI design of 5+ screen app.', 
-            'Developed Home, Timer Settings, Timer Countdown, Analytics, and App Settings screens.', 
-            'Collaborated on composing Google Cloud Firebase document system.',
-            'Implemented real-time CRUD operations on user documents ensuring dynamic data display of in-game currency, pet XP, and user info.',
+            projConts = ['Led UI design of 5+ screen app.', 
+            'Developed home, timer screens, analytics, and settings screens.', 
+            'Collaborated composing Firebase document system.',
+            'Implemented CRUD operations on database ensuring dynamic data display of user info.',
             ];
             projTools = ['React Native', 'Google Firebase', 'NativeWind', 'StyleSheet', 'Figma'];
             break;
         case 'tagAlong':
+            pic = 3;
             projRole = 'Full-Stack Developer';
             projTime = 'Aug 2022';
             projLinks = ['https://tags-5903e.web.app/'];
             projLinkDesc = ['Live Site'];
             projDesc = "College club website that connects club signees for companionship to meetings.";
             projTools = ['Vue.js', 'JavaScript','HTML', 'CSS', 'Google Firebase'];
-            projConts = ['Collaborated in composing Firestore Database fostering easy access and future scalability.', 
-            'Implemented reusable components and No-SQL Firebase queries utilized by team across website.', 
+            projConts = ['Collaborated composing database fostering easy access and future scalability.', 
+            'Implemented components and No-SQL Firebase queries utilized by team across website.', 
             'Developed key feature of club category to club name filtering using said queries.'
             ];
             break;
-        case 'R\'Steam':
+        case 'R\'Steam': 
+            pic = 4;
             projRole = 'Full-Stack Developer';
             projTime = 'Spring 2022';
             projLinks = ['https://github.com/galva041/CS180SteamDatabaseWeb.git'];
             projLinkDesc = ['GitHub'];
             projDesc = "Steam game database page to search and favorite your games.";
             projTools = ['Django', 'Python', 'HTML', 'CSS', 'NumPy'];
-            projConts = ['Displayed game data from a Kaggle Steam game .csv file for user to see.',
-            'Collaborated on preforming CRUD operations on user\'s searched and favorited games list.', 
-            'Implemented game platform bar chart and game developer pie chart using NumPy library to visualize data.'];
+            projConts = ['Displayed Steam game data from a Kaggle .csv file.',
+            'Preformed CRUD operations on user\'s searched and favorited games list.', 
+            'Implemented game platform bar chart and game developer pie chart to visualize data.'];
             break;
-        case 'Smart Water Bottle':
-            projRole = 'Embedded Systems Engineer';
-            projTime = 'Spring 2022';
-            projLinks = ['https://docs.google.com/document/d/1XRdUJLtG0ThLmGdhyGgaA7LjNVTf63NwWW8Jivmaxgc/edit?usp=sharing'];
-            projLinkDesc = ['Documentation'];
-            projDesc = "Water bottle that tracks water intake and motivates you to drink water.";
-            projTools = ['Arduino Nano', 'LCD Screen'];
-            projConts = ['Implemented daily water intake tracking using float switches, LCD screen, button, and blinking LED.', 
-            'Tested and ensured proper functioning of all components.', 
-            'Overcame challenges by researching and pivoting to different hardware.'
+        case 'Design@UCR':
+            pic = 5;
+            projRole = 'Front-End Engineer';
+            projTime = 'Spring 2023';
+            projLinks = ['https://www.designatucr.com/'];
+            projLinkDesc = ['Live Site (updated since)'];
+            projDesc = "Website for UC Riverside's student club that focuses on UI/UX and web design.";
+            projTools = ['Next.js', 'JavaScript', 'Tailwind', 'CSS', 'HTML', 'Figma'];
+            projConts = ['Implemented the About page Figma designs using Next.js, JavaScript, and Tailwind CSS.',
+            'Ensured reactivity to different screen sizes and devices utilizing breakpoints.', 
+            'Assisted teammates with troubleshooting Git obstacles and initializing project.', 
             ];
             break;
         default:
@@ -82,8 +93,8 @@ const Project = ({name}) => {
 
                 <Image
                     alt="graduation picture"
-                    src={gradpic}
-                    className="object-cover object-center h-4/6 w-full rounded-t-md bg-gray-600 group-hover:hidden"
+                    src={pic == 1? portfolio_light : pic == 2? studymates : pic == 3? tags : pic == 4? rsteam : design}
+                    className="object-scale-down object-center p-3 h-4/6 w-full rounded-t-md bg-gray-600 group-hover:hidden"
                 />
                 <div className="px-2.5 pb-6 justify-center items-start">
                     <h2 className="text-xl font-bold text-black dark:text-white group-hover:hidden">
@@ -119,7 +130,7 @@ const Project = ({name}) => {
                     <div>
                         
 
-                        <h3 className="text-black text-xs text-left">
+                        <h3 className="text-black text-sm text-left">
                             <ul className="list-disc pl-1.5 pr-1">
                                 {projConts.map((cont) => (
                                 <li className="py-0.5" key={cont}>{cont}</li>

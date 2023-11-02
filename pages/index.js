@@ -45,19 +45,19 @@ export default function Home() {
           </div>
 
           <div className='flex items-center ml-1 text-black dark:text-white'>
-            <Link href="/#work"><FaChevronDown className='animate-bounce'/></Link>
+            <Link href="/#projects"><FaChevronDown className='animate-bounce'/></Link>
             <hr className="h-px w-full ml-3 mr-1 border-0 bg-black dark:bg-white"/>
           </div>
         </div>
 
         <div className='flex justify-center items-center text-black dark:text-white sm:hidden mb-5 mt-36'>
           <hr className="h-0.5 w-24 border-0 bg-black dark:bg-white"/>
-          <Link href="/#work"><FaChevronDown className='animate-bounce mx-5'/></Link>
+          <Link href="/#projects"><FaChevronDown className='animate-bounce mx-5'/></Link>
           <hr className="h-0.5 w-24 border-0 bg-black dark:bg-white"/>
         </div>
       </section>
 
-      <section id="work" className='flex flex-col px-14 py-10 justify-between items-center'>
+      <section id="projects" className='flex flex-col px-14 py-10 justify-between items-center'>
         <h2 className='text-3xl xl:text-4xl font-bold text-start self-baseline mt-14 mb-2.5 text-black dark:text-white'>
           Projects
         </h2>
@@ -79,7 +79,7 @@ export default function Home() {
           <Project name="StudyMates!"/>
           <Project name="tagAlong"/>
           <Project name="R'Steam"/>
-          <Project name="Smart Water Bottle"/>
+          <Project name="Design@UCR"/>
         </div>
 
         <a className='flex justify-center items-center px-10 py-7 rounded-md bg-yellow hover:bg-gradi-yellow drop-shadow-lg'

@@ -89,7 +89,7 @@ const Navbar = () => {
                 <nav className="justify-self-center">
                     <ul className="flex justify-between">
                         <li><Link href="/about" >About</Link></li>
-                        <li><Link href="/#work">Projects</Link></li>
+                        <li><Link href="/#projects">Projects</Link></li>
                         <li><Link href="/resume" >Resume</Link></li>
                         {/* <li><a href="#">Contact</a></li> */}
                     </ul>
@@ -117,7 +117,7 @@ const Navbar = () => {
                     <nav className="my-2">
                         <ul className="flex flex-col">
                             <li><Link href="/about" onClick={handleNav}>About</Link></li>
-                            <li><Link href="/#work" onClick={handleNav}>Projects</Link></li>
+                            <li><Link href="/#projects" onClick={handleNav}>Projects</Link></li>
                             <li><Link href="/resume" onClick={handleNav}>Resume</Link></li>
                             {/* <li><a href="#">Contact</a></li> */}
                         </ul>

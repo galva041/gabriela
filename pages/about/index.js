@@ -1,8 +1,7 @@
 import Image from "next/image";
 import gradpic from "../../public/gradpic.jpg"
-import hobbies from "../../public/hobbies.jpg"
-import Iframe from "react-iframe";
 import smstar from "../../public/smstar.png"
+import {ImHeart, ImLinkedin, ImGithub, ImMail4,ImSpotify, ImInstagram} from "react-icons/im"
 
 const About = () => {
     return (
@@ -108,24 +107,46 @@ const About = () => {
                 </div>
                 <div className="flex flex-col justify-around items-center text-start w-80 row-span-2 p-5 rounded-md bg-periwinkle drop-shadow-md">
                     <h5 className="font-karla text-md place-self-start font-semibold">
-                        Some Scratch Fun:
+                        Some Scratch fun:
                     </h5>
 
                     <iframe className="mb-0 sm:mb-5 mt-3 sm:mt-0" src="https://scratch.mit.edu/projects/916662409/embed" allowtransparency="true" width="290" height="265" frameborder="0" scrolling="no" allowfullscreen></iframe>
                 </div>
                 
                 <div className="flex flex-col justify-around w-80 row-span-2 p-5 rounded-md bg-periwinkle drop-shadow-md">
-                    <h5 className="font-karla text-md font-semibold">
+                    <h5 className="font-karla text-md mb-3 font-semibold">
                         Where you can find me:
                     </h5>
-
+                    <div className="grid grid-cols-1 gap-4 xl:gap-8 justify-start text-black">
+                        <a href="mailto:ghalvarez0@gmail.com" target="_blank" className="flex hover:text-yellow">
+                        <ImMail4 size={30}/> <p className="ml-5 dark:text-black">E-mail me!</p>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gabriela-h-alvarez/" target="_blank" className="flex hover:text-yellow">
+                        <ImLinkedin size={30}/> <p className="ml-5 dark:text-black">Check out my LinkedIn.</p>
+                        </a>
+                        <a href="https://github.com/galva041" target="_blank" className="flex hover:text-yellow">
+                        <ImGithub size={30}/> <p className="ml-5 dark:text-black">GitHub.</p>
+                        </a>
+                        <a href="https://open.spotify.com/user/alvarezgabriela-us?si=8f6f022b74114c18" target="_blank" className="flex hover:text-yellow">
+                        <ImSpotify size={30}/> <p className="ml-5 dark:text-black">More tunes.</p>
+                        </a>
+                        <a href="https://www.instagram.com/alvarez.gaby/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" className="flex hover:text-yellow">
+                        <ImInstagram size={30}/> <p className="ml-5 dark:text-black">For fun. :)</p>
+                        </a>
+                    </div>
                 </div>
 
                 <div className="flex flex-col justify-around w-80 row-span-1 p-5 rounded-md bg-periwinkle drop-shadow-md">
                     <h5 className="font-karla text-md font-semibold">
                         How I spend my time:
                     </h5>
-                    <p className="font-worksans text-sm font-light dark:text-black">Going on sunset jogs. ☀️ <br/><span className="line-through">TikTok</span><br/>Thrift store shopping.<br/><span className="line-through">Napping</span><br/>Finding viewpoints to picnic at. 🧺</p>
+                    <p className="font-worksans text-sm font-light dark:text-black">
+                        Going on sunset jogs. ☀️ <br/>
+                        <span className="line-through">TikTok</span>
+                        <br/>Thrift store shopping.<br/>
+                        <span className="line-through">Napping</span>
+                        <br/>Finding viewpoints to picnic at. 🧺
+                    </p>
                 </div>
             </section>
             
