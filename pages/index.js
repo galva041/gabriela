@@ -78,7 +78,7 @@ export default function Home() {
           <Project name="My Portfolio"/>
           <Project name="StudyMates!"/>
           <Project name="tagAlong"/>
-          <Project name="R&rsquo;Steam"/>
+          <Project name="R'Steam"/>
           <Project name="Design@UCR"/>
         </div>
 
