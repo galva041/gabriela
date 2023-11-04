@@ -1,6 +1,7 @@
 import Image from "next/image";
 import gradpic from "../../public/gradpic.jpg"
 import smstar from "../../public/smstar.png"
+import bluestar from "../../public/bluestarsm.png"
 import {ImHeart, ImLinkedin, ImGithub, ImMail4,ImSpotify, ImInstagram} from "react-icons/im"
 
 const About = () => {
@@ -77,7 +78,7 @@ const About = () => {
                 <hr className="h-0.5 w-full border-0 bg-black dark:bg-white"/>
                     <Image
                         alt="smstar"
-                        src={smstar} 
+                        src={bluestar} 
                         width='100%'
                         height='100%'
                         className="object-contain animate-pulse mx-5 md:mx-20"
