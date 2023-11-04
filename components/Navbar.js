@@ -8,17 +8,20 @@ import { useTheme } from "next-themes";
 
 const Navbar = () => {
     const router = useRouter();
+    const handleRefresh = () => {
+        router.reload();
+    };
     var [currTheme, setTheme] = useState(null);
-    useEffect(() => {
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
+    // useEffect(() => {
+    //     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    //         document.documentElement.classList.add('dark')
+    //     } else {
+    //         document.documentElement.classList.remove('dark')
+    //     }
 
-        setTheme(localStorage.theme);
-        console.log(currTheme);
-    }, []);
+    //     setTheme(localStorage.theme);
+    //     console.log(currTheme);
+    // }, []);
 
     const [mobileNav, setNav] = useState(false);
     const handleNav = () => {
@@ -27,40 +30,38 @@ const Navbar = () => {
 
     const [color, setColor] = useState('transparent');
     const [shadow, setShadow] = useState('0px 0px 0px #262323')
-    const [home, setWindow] = useState(true);
+    // const [home, setWindow] = useState(true);
 
     
-    const pageChange = (page) => {
-        if (page === 'home') {
-            // setColor('transparent'),
-            setWindow(true)
-        } else (
-            // setColor('#323743'),
-            setWindow(false)
-        )
-    };
-    const setLightTheme = () => {
-        localStorage.theme = 'light';
-    };
+    // const pageChange = (page) => {
+    //     if (page === 'home') {
+    //         // setColor('transparent'),
+    //         setWindow(true)
+    //     } else (
+    //         // setColor('#323743'),
+    //         setWindow(false)
+    //     )
+    // };
+    // const setLightTheme = () => {
+    //     localStorage.theme = 'light';
+    // };
 
-    const setDarkTheme = () => {
-        localStorage.theme = 'dark';
-    };
+    // const setDarkTheme = () => {
+    //     localStorage.theme = 'dark';
+    // };
     useEffect(() => {
 
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark')
-                } else {
-                    document.documentElement.classList.remove('dark')
-                    document.documentElement.classList.add('light')
-                }
+        // if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        //             document.documentElement.classList.add('dark')
+        //         } else {
+        //             document.documentElement.classList.remove('dark')
+        //             document.documentElement.classList.add('light')
+        //         }
         
-                setTheme(localStorage.theme);
-                //console.log(currTheme);
+        setTheme(localStorage.theme); 
 
         const changeColor = (url) => {
             const isLandingPage = (url === '/');
-            // console.log(url);
 
             if (window.scrollY >= 60 || !isLandingPage) {
                 setColor('#323743');
@@ -96,11 +97,11 @@ const Navbar = () => {
                 </nav>
 
                 {/* {currTheme === 'dark' ? (
-                    <button onClick={setLightTheme} className="drop-shadow-sm hover:text-yellow">
+                    <button onClick={() => {setLightTheme(); handleRefresh();}} className="drop-shadow-sm hover:text-yellow">
                         <PiMoonStarsBold color="white" size={25}/>
                     </button>
                 ): (
-                    <button onClick={setDarkTheme} className="drop-shadow-sm hover:text-yellow">
+                    <button onClick={() => {setDarkTheme(); handleRefresh();}} className="drop-shadow-sm hover:text-yellow">
                         <PiSunBold color="black" size={25}/>
                     </button>
                 )} */}
@@ -124,11 +125,11 @@ const Navbar = () => {
                     </nav>
 
                     {/* {currTheme === 'dark' ? (
-                    <button onClick={setLightTheme} className="drop-shadow-sm hover:text-yellow">
+                    <button onClick={() => {setLightTheme(); handleRefresh();}} className="drop-shadow-sm hover:text-yellow">
                         <PiMoonStarsBold color="white" size={25}/>
                     </button>
                     ): (
-                        <button onClick={setDarkTheme} className="drop-shadow-sm hover:text-yellow">
+                        <button onClick={() => {setDarkTheme(); handleRefresh();}} className="drop-shadow-sm hover:text-yellow">
                             <PiSunBold color="black" size={25}/>
                         </button>
                     )} */}
